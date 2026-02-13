@@ -1,68 +1,89 @@
-#  Facial Emotion Recognition using CNN
+#  Facial Emotion Recognition System using CNN
 
 ##  Project Overview
-A deep learning-based system that detects human facial emotions in real-time using a Convolutional Neural Network (CNN) trained on the FER-2013 dataset.
+This project is an end-to-end Facial Emotion Recognition System that detects human emotions from facial expressions using a Convolutional Neural Network (CNN).
+The trained deep learning model is integrated with OpenCV to perform real-time emotion detection through webcam input.
 
 ---
 
-##  Features
-- Image preprocessing & data augmentation
-- CNN architecture with Conv2D, MaxPooling, Dropout
-- Achieved ~60-65% validation accuracy
-- Real-time emotion detection using OpenCV
-- Haar Cascade for face detection
+##  Project Features
+- Image preprocessing and normalization
+- Data augmentation to improve model generalization
+- CNN-based deep learning model for emotion classification
+- Real-time facial emotion detection using webcam
+- Face detection using Haar Cascade classifier
+- Modular and well-structured implementation
+
+---
+
+##  Problem Statement
+Understanding human emotions plays a crucial role in human–computer interaction, mental health analysis, and intelligent systems.
+This project aims to automatically recognize facial emotions from images using deep learning techniques to enable real-time emotion-aware applications.
 
 ---
 
 ##  Tech Stack
-- Python
-- TensorFlow / Keras
-- OpenCV
-- NumPy
-- Matplotlib
+- **Programming Language:** Python  
+- **Deep Learning Framework:** TensorFlow, Keras  
+- **Computer Vision:** OpenCV  
+- **Libraries:** NumPy, Matplotlib, Scikit-learn  
+- **Face Detection:** Haar Cascade  
+- **Tools:** Git, GitHub  
 
 ---
 
-##  Project Structure
-```
-Facial_Emotion_Recognition/
-│
-├── model/
-│   └── emotion_model.h5
-│
-├── haarcascade/
-│   └── haarcascade_frontalface_default.xml
-│
-├── emotion_detector.py
-├── requirements.txt
-└── README.md
-```
+##  Dataset
+- **FER-2013 Dataset (Kaggle)**
+- 48×48 grayscale facial images
+- 7 emotion classes:
+  - Angry
+  - Disgust
+  - Fear
+  - Happy
+  - Sad
+  - Surprise
+  - Neutral
 
 ---
 
-##  How to Run
-
-1. Create virtual environment  
-2. Install dependencies  
-```
-pip install -r requirements.txt
-```
-
-3. Run real-time emotion detection  
-```
-python emotion_detector.py
-```
-
-Press **Q** to exit webcam.
+##  Project Workflow
+1. Dataset Collection  
+2. Image Preprocessing & Augmentation  
+3. CNN Model Architecture Design  
+4. Model Training & Validation  
+5. Model Evaluation  
+6. Model Saving  
+7. Real-time Emotion Detection using OpenCV  
 
 ---
 
 ##  Model Performance
-Validation Accuracy: ~60–65%
+- Validation Accuracy: **~60–65%**
+- Evaluated using:
+  - Accuracy
+  - Loss Curves
+  - Confusion Matrix
+  - Classification Report
 
 ---
 
-##  Future Improvements
-- Improve accuracy using transfer learning
-- Deploy as Flask web app
-- Add emotion analytics dashboard
+##  Real-Time Emotion Detection
+The system captures live video through a webcam, detects faces, and predicts emotions in real time.
+
+**Predicted Emotions:**
+- 😠 Angry  
+- 🤢 Disgust  
+- 😨 Fear  
+- 😀 Happy  
+- 😢 Sad  
+- 😲 Surprise  
+- 😐 Neutral  
+
+Press **Q** to exit the webcam window.
+
+---
+
+##  How to Run the Project
+```bash
+pip install -r requirements.txt
+python emotion_detector.py
